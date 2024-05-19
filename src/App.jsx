@@ -23,6 +23,7 @@ function App() {
           {
             const apiData = JSON.parse(localStorage.getItem(localKey));
             setFetchedData(apiData);
+            console.log(apiData);
             console.log("fetched from cached");
             return;
           }
@@ -32,6 +33,7 @@ function App() {
           const data = await res.json();
           localStorage.setItem(localKey,JSON.stringify(data));
           console.log("fetched from API");
+          console.log(data);
           setFetchedData(data);
          
         }
