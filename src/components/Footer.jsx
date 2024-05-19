@@ -1,12 +1,14 @@
-export default function Footer() {
+export default function Footer(props) {
+  const {showModal,handleDisplay,data}=props;
   return (
     <footer>
         <div className="gradi"></div>
       <div>
-        <h2>Info of the picture: iceland</h2>
-        <h1>APOD Project</h1>
+      <h1>Astronomy Image</h1>
+        <h2>{data?.title}</h2>
+        
       </div>
-      <button>
+      <button onClick={handleDisplay}>
         <i className="fa-solid fa-circle-info"></i>
       </button>
     </footer>
